@@ -6,142 +6,101 @@
     <title>🇨🇭 João Lima Fernandes</title>
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAi0lEQVR42mL8//8/AwAI/AGi6bEEAAAAASUVORK5CYII=" type="image/x-icon">
     <style>
-        /* Reset some default styles */
-        body, h1, h2, h3, p, ul {
-            margin: 0;
-            padding: 0;
-        }
+        /* Your styles here */
 
-        /* Modern styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #fff; /* White background */
             color: #333; /* Dark text color */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center content vertically */
-            align-items: center; /* Center content horizontally */
-            min-height: 100vh;
-            margin: 0; /* Remove default body margin */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333; /* Dark background for the menu */
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* White menu text color */
         }
 
         .container {
-            width: 90%; /* Adjust the width as needed */
-            max-width: 800px;
+            max-width: 960px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         header {
-            background-color: #fff; /* White header background */
-            color: #333;
-            padding: 20px 0;
-            border-radius: 10px 10px 0 0;
+            background: url('your-background-image.jpg') center/cover no-repeat fixed;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
         }
 
         header h1 {
-            font-family: 'Pacifico', cursive; /* Signature-like font */
             font-size: 2.5em;
             margin: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            background-color: #fff; /* White box behind text */
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 10px;
         }
 
         header p {
             font-size: 1.2em;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            background-color: transparent;
-            padding: 10px 0;
-            border-radius: 0 0 10px 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333; /* Dark links */
-            font-weight: bold;
-        }
-
-        .slogan {
-            background-color: #020c1b; /* Darker blue for slogan background */
-            color: #fff;
-            padding: 20px 0;
-            border-radius: 0 0 10px 10px;
         }
 
         .langues {
-            background-color: #020c1b; /* Darker blue for langues background */
-            color: #fff;
-            padding: 10px 0;
-            border-radius: 0 0 10px 10px;
-            cursor: pointer; /* Add cursor pointer for interaction */
+            text-align: right;
+            margin-bottom: 20px;
         }
 
-        .sub-slogan {
-            background-color: #020c1b; /* Darker blue for sub-slogan background */
-            color: #fff;
-            padding: 10px 0;
-            border-radius: 0 0 10px 10px;
-        }
-
-        hr {
+        .langues button {
+            background: none;
             border: none;
-            border-top: 1px solid #ccc;
-            width: 50%;
-            margin: 20px auto;
+            font-size: 1em;
+            cursor: pointer;
+            color: #333; /* Dark text color */
+        }
+
+        .slogan {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .slogan p {
+            font-size: 1.2em;
+            color: #333; /* Dark text color */
         }
 
         section {
-            margin-bottom: 20px;
-            padding: 20px 0;
-            background-color: #fff; /* White background for sections */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
 
         section h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            color: #333; /* Dark section titles */
+            font-size: 1.5em;
         }
 
         section p {
             font-size: 1.2em;
-            margin-bottom: 8px;
         }
 
         /* Footer styles */
         footer {
-            background-color: #fff; /* White footer background */
+            background-color: #fff; /* White background for the footer */
             color: #333; /* Dark text color */
-            padding: 20px 0;
             text-align: center;
-            border-radius: 0 0 10px 10px;
+            padding: 20px 0;
         }
 
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%; /* Adjust the width for smaller screens */
-            }
+        footer p {
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -157,7 +116,7 @@
 
     <div class="container" id="about">
         <div class="langues">
-            <a href="#" id="lang-fr">Français</a> | <a href="#" id="lang-en">Anglais</a> | <a href="#" id="lang-pt">Portugais</a>
+            <button id="lang-fr">Français</button> | <button id="lang-en">Anglais</button> | <button id="lang-pt">Portugais</button>
         </div>
         
         <header>
@@ -215,31 +174,54 @@
     <script>
         // JavaScript for language switching
         document.getElementById('lang-fr').addEventListener('click', function() {
-            // Use an external translation service to translate the page to Swiss French
-            // Replace the document content with the translated content
-            // You would need to implement this part using a translation API or service
-            // For example, you can use Google Translate API to achieve this functionality.
-            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
-            alert('This feature requires a translation service and API integration.');
+            // Translate the page to Swiss French using Google Translate API
+            translatePage('fr');
         });
 
         document.getElementById('lang-en').addEventListener('click', function() {
-            // Use an external translation service to translate the page to English
-            // Replace the document content with the translated content
-            // You would need to implement this part using a translation API or service
-            // For example, you can use Google Translate API to achieve this functionality.
-            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
-            alert('This feature requires a translation service and API integration.');
+            // Translate the page to English using Google Translate API
+            translatePage('en');
         });
 
         document.getElementById('lang-pt').addEventListener('click', function() {
-            // Use an external translation service to translate the page to Portuguese (Portugal)
-            // Replace the document content with the translated content
-            // You would need to implement this part using a translation API or service
-            // For example, you can use Google Translate API to achieve this functionality.
-            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
-            alert('This feature requires a translation service and API integration.');
+            // Translate the page to Portuguese (Portugal) using Google Translate API
+            translatePage('pt');
         });
+
+        // Function to translate the page content using Google Translate API
+        function translatePage(language) {
+            // Replace 'YOUR_API_KEY' with your actual Google Translate API key
+            const apiKey = 'YOUR_API_KEY';
+            const targetLanguage = language;
+
+            // Get the current page content
+            const pageContent = document.documentElement.outerHTML;
+
+            // Construct the API URL for translation
+            const apiUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&target=${targetLanguage}`;
+            
+            // Make an API request to translate the content
+            fetch(apiUrl, {
+                method: 'POST',
+                body: JSON.stringify({
+                    q: pageContent,
+                    source: 'auto', // Auto-detect source language
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.data && data.data.translations && data.data.translations.length > 0) {
+                    // Update the page content with translated content
+                    document.documentElement.innerHTML = data.data.translations[0].translatedText;
+                }
+            })
+            .catch(error => {
+                console.error('Translation error:', error);
+            });
+        }
     </script>
 </body>
 </html>
