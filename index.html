@@ -6,7 +6,7 @@
     <title>🇨🇭 João Lima Fernandes</title>
     <style>
         /* Reset some default styles */
-        body, h1, h2, p, ul {
+        body, h1, h2, h3, p, ul {
             margin: 0;
             padding: 0;
         }
@@ -51,6 +51,27 @@
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
         }
 
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
         hr {
             border: none;
             border-top: 1px solid #ccc;
@@ -60,6 +81,7 @@
 
         section {
             margin-bottom: 20px;
+            padding: 20px 0;
         }
 
         section h2 {
@@ -91,7 +113,16 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="about">
         <header>
             <h1>À propos de João Lima Fernandes</h1>
             <p>Médecin-dentiste diplômé en médecine dentaire en 2020 de l'Institut Universitaire Egas Moniz, avec une spécialisation clinique en parodontologie, chirurgie et réhabilitation orale, tout en ayant un intérêt marqué pour l'enseignement. Depuis la fin de ma formation jusqu'à aujourd'hui, je suis membre de l'équipe de Médecine Dentaire Conservatrice I, II, III et IV de l’Institut Universitaire Egas Moniz.</p>
@@ -99,48 +130,26 @@
 
         <hr>
 
-        <section>
-            <h2>Formation Universitaire</h2>
-            <p>Diplôme d'études supérieures en Réhabilitation Orale et Biomimétique Avancée de la CESPU</p>
-            <p>2024</p>
-            <p>Diplôme d'études supérieures en Chirurgie Orale de l'Université des Sciences Médicales de Villa Clara, Santa Clara, Cuba</p>
-            <p>2023</p>
-            <p>Titre d'Expert en Chirurgie, Parodontologie et Réhabilitation Orale sur Implants de l'Université de Nebrija, Madrid</p>
-            <p>2021-2022</p>
-            <p>Diplôme d’études supérieures en Endodontie de FromRoots Endodontics School</p>
-            <p>2020</p>
-            <p>Cours Modulaire sur les Restaurations Directes en Résine Composée par le Dr. Paulo Monteiro</p>
-            <p>2020</p>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <p>Parodontologie</p>
+            <p>Chirurgie buccale</p>
+            <p>Réhabilitation orale</p>
+            <p>Endodontie</p>
         </section>
 
         <hr>
 
-        <section>
-            <h2>Expérience Professionnelle</h2>
-            <p>Laranjeira Dental Clinic (Cascais)</p>
-            <p>2023</p>
-            <p>Clinica Patrão (Lisbonne)</p>
-            <p>MasterDental (Lisbonne, Oeiras et Torres Vedras)</p>
-            <p>Dentalface (Lisbonne)</p>
-            <p>Smileup (Lisbonne, Barreiro, Vila Franca de Xira et Odivelas)</p>
-            <p>2020-2022</p>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>Recherche et Enseignement</h2>
-            <p>Collaborateur de Médecine Dentaire Conservatrice I, II, III et IV, depuis 2020 à aujourd'hui.</p>
-            <p>Collaborateur de Réhabilitation Orale et de Chirurgie, de 2020 à 2022.</p>
-            <p>Collaborateur de Triages/Urgences, en 2020.</p>
-            <p>Membre de la Commission Éditoriale du Journal of Dentistry and Oral Sciences, 2021</p>
-            <p>Co-auteur de plusieurs posters scientifiques.</p>
+        <section id="projects">
+            <h2>Projets</h2>
+            <p>Projet 1: [Description du projet]</p>
+            <p>Projet 2: [Description du projet]</p>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container" id="contact">
             <p>&copy; 2023 João Lima Fernandes</p>
             <p>Contact : +351960310918</p>
             <p>Email : limafernandesmd@gmail.com</p>
