@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr-CH">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🇨🇭 João Lima Fernandes</title>
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAi0lEQVR42mL8//8/AwAI/AGi6bEEAAAAASUVORK5CYII=" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.7.3/dist/umd/i18next.min.js"></script>
     <style>
         /* Your styles here */
 
@@ -107,120 +108,170 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#diplomes">Diplômes</a></li>
-            <li><a href="#activite">Activité scientifique</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#diplomes">{{t('menu.diplomes')}}</a></li>
+            <li><a href="#activite">{{t('menu.activite')}}</a></li>
+            <li><a href="#experience">{{t('menu.experience')}}</a></li>
+            <li><a href="#contact">{{t('menu.contact')}}</a></li>
         </ul>
     </nav>
 
     <div class="container" id="about">
         <div class="langues">
-            <button id="lang-fr">Français</button> | <button id="lang-en">Anglais</button> | <button id="lang-pt">Portugais</button>
+            <button id="lang-en" onclick="changeLanguage('en')">{{t('menu.english')}}</button> | <button id="lang-fr" onclick="changeLanguage('fr')">{{t('menu.french')}}</button> | <button id="lang-pt" onclick="changeLanguage('pt')">{{t('menu.portuguese')}}</button>
         </div>
         
         <header>
-            <h1>João Lima Fernandes</h1>
-            <p>Médecin-dentiste diplômé en médecine dentaire en 2020 de l'Institut Universitaire Egas Moniz, avec une spécialisation clinique en parodontologie, chirurgie et réhabilitation orale, tout en ayant un intérêt marqué pour l'enseignement. Depuis la fin de ma formation jusqu'à aujourd'hui, je suis membre de l'équipe de Médecine Dentaire Conservatrice I, II, III et IV de l’Institut Universitaire Egas Moniz.</p>
+            <h1>{{t('header.title')}}</h1>
+            <p>{{t('header.subtitle')}}</p>
         </header>
 
         <div class="slogan">
-            <p>Parodontologie | Chirurgie orale | Dentisteries Adhésive et Esthétique | Prothèse Fixe et Amovible</p>
+            <p>{{t('slogan.text')}}</p>
         </div>
     </div>
 
     <div class="container" id="diplomes">
         <section>
-            <h2>Diplômes</h2>
-            <p>Diplôme d'études supérieures en Réhabilitation Orale et Biomimétique Avancée de la CESPU - 2024</p>
-            <p>Diplôme d'études supérieures en Chirurgie Orale de l'Université des Sciences Médicales de Villa Clara, Santa Clara, Cuba - 2023</p>
-            <p>Titre d'Expert en Chirurgie, Parodontologie et Réhabilitation Orale sur Implants de l'Université de Nebrija, Madrid - 2021-2022</p>
-            <p>Diplôme d’études supérieures en Endodontie de FromRoots Endodontics School - 2020</p>
-            <p>Cours Modulaire sur les Restaurations Directes en Résine Composée par le Dr. Paulo Monteiro - 2020</p>
+            <h2>{{t('diplomes.title')}}</h2>
+            <p>{{t('diplomes.diploma1')}}</p>
+            <p>{{t('diplomes.diploma2')}}</p>
+            <p>{{t('diplomes.diploma3')}}</p>
+            <p>{{t('diplomes.diploma4')}}</p>
+            <p>{{t('diplomes.diploma5')}}</p>
         </section>
     </div>
 
     <div class="container" id="activite">
         <section>
-            <h2>Activité scientifique</h2>
-            <p>Collaborateur de Médecine Dentaire Conservatrice I, II, III et IV, depuis 2020 à aujourd'hui.</p>
-            <p>Collaborateur de Réhabilitation Orale et de Chirurgie, de 2020 à 2022.</p>
-            <p>Collaborateur de Triages/Urgences, en 2020.</p>
-            <p>Membre de la Commission Éditoriale du Journal of Dentistry and Oral Sciences, 2021.</p>
-            <p>Co-auteur de plusieurs posters scientifiques.</p>
+            <h2>{{t('activite.title')}}</h2>
+            <p>{{t('activite.activity1')}}</p>
+            <p>{{t('activite.activity2')}}</p>
+            <p>{{t('activite.activity3')}}</p>
+            <p>{{t('activite.activity4')}}</p>
+            <p>{{t('activite.activity5')}}</p>
         </section>
     </div>
 
     <div class="container" id="experience">
         <section>
-            <h2>Expérience</h2>
-            <p>Laranjeira Dental Clinic (Cascais) - 2023</p>
-            <p>Clinica Patrão (Lisbonne) - 2023</p>
-            <p>MasterDental (Lisbonne, Oeiras et Torres Vedras) - 2020-2022</p>
-            <p>Dentalface (Lisbonne) - 2020-2022</p>
-            <p>Smileup (Lisbonne, Barreiro, Vila Franca de Xira et Odivelas) - 2020-2022</p>
+            <h2>{{t('experience.title')}}</h2>
+            <p>{{t('experience.experience1')}}</p>
+            <p>{{t('experience.experience2')}}</p>
+            <p>{{t('experience.experience3')}}</p>
+            <p>{{t('experience.experience4')}}</p>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="container" id="contact">
-            <p>&copy; 2023 João Lima Fernandes</p>
-            <p>Contact : +351960310918</p>
-            <p>Email : limafernandesmd@gmail.com</p>
-        </div>
+        <p>{{t('footer.copyright')}}</p>
+        <p>{{t('footer.contact')}}: +351960310918 | {{t('footer.email')}}: limafernandesmd@gmail.com</p>
     </footer>
 
     <script>
-        // JavaScript for language switching
-        document.getElementById('lang-fr').addEventListener('click', function() {
-            // Translate the page to Swiss French using Google Translate API
-            translatePage('fr');
-        });
-
-        document.getElementById('lang-en').addEventListener('click', function() {
-            // Translate the page to English using Google Translate API
-            translatePage('en');
-        });
-
-        document.getElementById('lang-pt').addEventListener('click', function() {
-            // Translate the page to Portuguese (Portugal) using Google Translate API
-            translatePage('pt');
-        });
-
-        // Function to translate the page content using Google Translate API
-        function translatePage(language) {
-            // Replace 'YOUR_API_KEY' with your actual Google Translate API key
-            const apiKey = 'YOUR_API_KEY';
-            const targetLanguage = language;
-
-            // Get the current page content
-            const pageContent = document.documentElement.outerHTML;
-
-            // Construct the API URL for translation
-            const apiUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&target=${targetLanguage}`;
-            
-            // Make an API request to translate the content
-            fetch(apiUrl, {
-                method: 'POST',
-                body: JSON.stringify({
-                    q: pageContent,
-                    source: 'auto', // Auto-detect source language
-                }),
-                headers: {
-                    'Content-Type': 'application/json',
+        i18next.init({
+            lng: 'en',
+            resources: {
+                en: {
+                    translation: {
+                        "menu.diplomes": "Diplomas",
+                        "menu.activite": "Activity",
+                        "menu.experience": "Experience",
+                        "menu.contact": "Contact",
+                        "header.title": "João Lima Fernandes",
+                        "header.subtitle": "Dentist",
+                        "slogan.text": "Periodontology | Oral Surgery | Adhesive and Aesthetic Dentistry | Fixed and Removable Prosthesis",
+                        "diplomes.title": "Diplomas",
+                        "diplomes.diploma1": "Diploma 1 text here",
+                        "diplomes.diploma2": "Diploma 2 text here",
+                        "diplomes.diploma3": "Diploma 3 text here",
+                        "diplomes.diploma4": "Diploma 4 text here",
+                        "diplomes.diploma5": "Diploma 5 text here",
+                        "activite.title": "Activity",
+                        "activite.activity1": "Activity 1 text here",
+                        "activite.activity2": "Activity 2 text here",
+                        "activite.activity3": "Activity 3 text here",
+                        "activite.activity4": "Activity 4 text here",
+                        "activite.activity5": "Activity 5 text here",
+                        "experience.title": "Experience",
+                        "experience.experience1": "Experience 1 text here",
+                        "experience.experience2": "Experience 2 text here",
+                        "experience.experience3": "Experience 3 text here",
+                        "experience.experience4": "Experience 4 text here",
+                        "footer.copyright": "2023 João Lima Fernandes",
+                        "footer.contact": "Contact",
+                        "footer.email": "Email",
+                    }
                 },
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.data && data.data.translations && data.data.translations.length > 0) {
-                    // Update the page content with translated content
-                    document.documentElement.innerHTML = data.data.translations[0].translatedText;
+                fr: {
+                    translation: {
+                        "menu.diplomes": "Diplômes",
+                        "menu.activite": "Activité",
+                        "menu.experience": "Expérience",
+                        "menu.contact": "Contact",
+                        "header.title": "João Lima Fernandes",
+                        "header.subtitle": "Dentiste",
+                        "slogan.text": "Parodontologie | Chirurgie orale | Dentisteries adhésive et esthétique | Prothèse fixe et amovible",
+                        "diplomes.title": "Diplômes",
+                        "diplomes.diploma1": "Diplôme 1 texte ici",
+                        "diplomes.diploma2": "Diplôme 2 texte ici",
+                        "diplomes.diploma3": "Diplôme 3 texte ici",
+                        "diplomes.diploma4": "Diplôme 4 texte ici",
+                        "diplomes.diploma5": "Diplôme 5 texte ici",
+                        "activite.title": "Activité",
+                        "activite.activity1": "Activité 1 texte ici",
+                        "activite.activity2": "Activité 2 texte ici",
+                        "activite.activity3": "Activité 3 texte ici",
+                        "activite.activity4": "Activité 4 texte ici",
+                        "activite.activity5": "Activité 5 texte ici",
+                        "experience.title": "Expérience",
+                        "experience.experience1": "Expérience 1 texte ici",
+                        "experience.experience2": "Expérience 2 texte ici",
+                        "experience.experience3": "Expérience 3 texte ici",
+                        "experience.experience4": "Expérience 4 texte ici",
+                        "footer.copyright": "2023 João Lima Fernandes",
+                        "footer.contact": "Contact",
+                        "footer.email": "Email",
+                    }
+                },
+                pt: {
+                    translation: {
+                        "menu.diplomes": "Diplomas",
+                        "menu.activite": "Atividade",
+                        "menu.experience": "Experiência",
+                        "menu.contact": "Contato",
+                        "header.title": "João Lima Fernandes",
+                        "header.subtitle": "Dentista",
+                        "slogan.text": "Periodontia | Cirurgia Oral | Dentística Adesiva e Estética | Prótese Fixa e Removível",
+                        "diplomes.title": "Diplomas",
+                        "diplomes.diploma1": "Diploma 1 texto aqui",
+                        "diplomes.diploma2": "Diploma 2 texto aqui",
+                        "diplomes.diploma3": "Diploma 3 texto aqui",
+                        "diplomes.diploma4": "Diploma 4 texto aqui",
+                        "diplomes.diploma5": "Diploma 5 texto aqui",
+                        "activite.title": "Atividade",
+                        "activite.activity1": "Atividade 1 texto aqui",
+                        "activite.activity2": "Atividade 2 texto aqui",
+                        "activite.activity3": "Atividade 3 texto aqui",
+                        "activite.activity4": "Atividade 4 texto aqui",
+                        "activite.activity5": "Atividade 5 texto aqui",
+                        "experience.title": "Experiência",
+                        "experience.experience1": "Experiência 1 texto aqui",
+                        "experience.experience2": "Experiência 2 texto aqui",
+                        "experience.experience3": "Experiência 3 texto aqui",
+                        "experience.experience4": "Experiência 4 texto aqui",
+                        "footer.copyright": "2023 João Lima Fernandes",
+                        "footer.contact": "Contato",
+                        "footer.email": "Email",
+                    }
                 }
-            })
-            .catch(error => {
-                console.error('Translation error:', error);
-            });
+            }
+        }, function(err, t) {
+            // Initialize your application and set up language switching
+        });
+
+        // Function to change the language
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang);
         }
     </script>
 </body>
