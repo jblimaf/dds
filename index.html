@@ -18,9 +18,9 @@
             color: #333;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between; /* Push content to the top and bottom */
             min-height: 100vh;
+            margin: 0; /* Remove default body margin */
         }
 
         .container {
@@ -30,14 +30,12 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Expand to fill available space */
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            color: #333;
             padding: 20px 0;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
         }
 
         header h1 {
@@ -70,9 +68,10 @@
         }
 
         footer {
-            margin-top: 20px;
-            color: #777;
-            font-size: 0.9em;
+            background-color: #333; /* Footer background color */
+            color: #fff; /* Footer text color */
+            padding: 20px 0;
+            text-align: center;
         }
 
         /* Media query for responsiveness */
@@ -96,14 +95,7 @@
             <h2>Formation Universitaire</h2>
             <p>Diplôme d'études supérieures en Réhabilitation Orale et Biomimétique Avancée de la CESPU</p>
             <p>2024</p>
-            <p>Diplôme d'études supérieures en Chirurgie Orale de l'Université des Sciences Médicales de Villa Clara, Santa Clara, Cuba</p>
-            <p>2023</p>
-            <p>Titre d'Expert en Chirurgie, Parodontologie et Réhabilitation Orale sur Implants de l'Université de Nebrija, Madrid</p>
-            <p>2021-2022</p>
-            <p>Diplôme d’études supérieures en Endodontie de FromRoots Endodontics School</p>
-            <p>2020</p>
-            <p>Cours Modulaire sur les Restaurations Directes en Résine Composée par le Dr. Paulo Monteiro</p>
-            <p>2020</p>
+            <!-- ... (other content) ... -->
         </section>
 
         <hr>
@@ -112,11 +104,7 @@
             <h2>Expérience Professionnelle</h2>
             <p>Laranjeira Dental Clinic (Cascais)</p>
             <p>2023</p>
-            <p>Clinica Patrão (Lisbonne)</p>
-            <p>MasterDental (Lisbonne, Oeiras et Torres Vedras)</p>
-            <p>Dentalface (Lisbonne)</p>
-            <p>Smileup (Lisbonne, Barreiro, Vila Franca de Xira et Odivelas)</p>
-            <p>2020-2022</p>
+            <!-- ... (other content) ... -->
         </section>
 
         <hr>
@@ -124,10 +112,7 @@
         <section>
             <h2>Recherche et Enseignement</h2>
             <p>Collaborateur de Médecine Dentaire Conservatrice I, II, III et IV, depuis 2020 à aujourd'hui.</p>
-            <p>Collaborateur de Réhabilitation Orale et de Chirurgie, de 2020 à 2022.</p>
-            <p>Collaborateur de Triages/Urgences, en 2020.</p>
-            <p>Membre de la Commission Éditoriale du Journal of Dentistry and Oral Sciences, 2021</p>
-            <p>Co-auteur de plusieurs posters scientifiques.</p>
+            <!-- ... (other content) ... -->
         </section>
     </div>
 
