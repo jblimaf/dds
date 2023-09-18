@@ -21,42 +21,27 @@
             text-align: center;
         }
         header {
-            background-color: #fff; /* White background */
-            color: transparent; /* Transparent text color */
-            text-align: center;
-            padding: 100px 0;
-            position: relative;
+            display: none; /* Hide the header */
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            background: linear-gradient(to right, #666, #333); /* Grey gradient for text */
-            -webkit-background-clip: text; /* Clip text to gradient */
-            background-clip: text;
-            color: transparent;
-        }
-        header p {
-            font-size: 1.2em;
-            background: linear-gradient(to right, #666, #333); /* Grey gradient for text */
-            -webkit-background-clip: text; /* Clip text to gradient */
-            background-clip: text;
-            color: transparent;
+        hr {
+            border: 1px solid #000; /* Black thin line */
+            width: 50%; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the line horizontally */
+            margin-bottom: 20px; /* Add some spacing between sections */
         }
         /* Add more styles as needed */
 
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+    <div class="container">
+        <section id="about">
             <h1>About João Lima Fernandes</h1>
             <p>
                 Médecine dentiste diplômé en médecine dentaire en 2020 de l'Institut Universitaire Egas Moniz, avec une spécialisation clinique en parodontologie, chirurgie et réhabilitation orale, tout en ayant un intérêt marqué pour l'enseignement. Depuis la fin de ma formation jusqu'à aujourd'hui, je suis membre de l'équipe de Médecine Dentaire Conservatrice I, II, III et IV de l’Institut Universitaire Egas Moniz.
             </p>
-        </div>
-    </header>
-
-    <div class="container">
+        </section>
+        <hr> <!-- Black thin line -->
         <section id="resume">
             <h2>Resume</h2>
             <p>Education:</p>
@@ -73,29 +58,8 @@
                 <!-- Add more relevant experience here -->
             </ul>
         </section>
-
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Here are some of my notable works:</p>
-            <ul>
-                <li>Case Study 1: [Description of the case]</li>
-                <li>Case Study 2: [Description of the case]</li>
-                <!-- Add more portfolio items here -->
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email Address: limafernandesmd@gmail.com</p>
-            <p>Contact: +351960310918</p>
-        </section>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 João Lima Fernandes</p>
-            <!-- Add additional footer content, such as links to social media profiles or any other relevant information. -->
-        </div>
-    </footer>
+    <!-- The rest of your sections and footer can follow here -->
 </body>
 </html>
