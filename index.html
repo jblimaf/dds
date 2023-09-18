@@ -15,7 +15,7 @@
         /* Modern styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff; /* White background */
+            background-color: #f0f0f0; /* Light background color */
             color: #333; /* Dark text color */
             display: flex;
             flex-direction: column;
@@ -33,11 +33,12 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin between containers */
         }
 
         header {
-            background-color: #fff; /* White header background */
-            color: #333;
+            background-color: #0078d4; /* Blue header background */
+            color: #fff;
             padding: 20px 0;
             border-radius: 10px 10px 0 0;
         }
@@ -47,7 +48,7 @@
             font-size: 2.5em;
             margin: 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            background-color: #fff; /* White box behind text */
+            background-color: #0078d4; /* Blue box behind text */
             display: inline-block;
             padding: 10px 20px;
             border-radius: 10px;
@@ -56,6 +57,7 @@
         header p {
             font-size: 1.2em;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            margin: 10px 0; /* Add spacing below header text */
         }
 
         nav {
@@ -76,26 +78,31 @@
 
         nav a {
             text-decoration: none;
-            color: #333; /* Dark links */
+            color: #0078d4; /* Blue links */
             font-weight: bold;
+            transition: color 0.3s; /* Add hover transition */
+        }
+
+        nav a:hover {
+            color: #005ea3; /* Darker blue on hover */
         }
 
         .slogan {
-            background-color: #020c1b; /* Darker blue for slogan background */
+            background-color: #005ea3; /* Darker blue for slogan background */
             color: #fff;
             padding: 20px 0;
             border-radius: 0 0 10px 10px;
         }
 
         .langues {
-            background-color: #020c1b; /* Darker blue for langues background */
+            background-color: #005ea3; /* Darker blue for langues background */
             color: #fff;
             padding: 10px 0;
             border-radius: 0 0 10px 10px;
         }
 
         .sub-slogan {
-            background-color: #020c1b; /* Darker blue for sub-slogan background */
+            background-color: #005ea3; /* Darker blue for sub-slogan background */
             color: #fff;
             padding: 10px 0;
             border-radius: 0 0 10px 10px;
@@ -140,6 +147,14 @@
         @media (max-width: 768px) {
             .container {
                 width: 95%; /* Adjust the width for smaller screens */
+            }
+
+            header h1 {
+                font-size: 2em; /* Smaller header font size on mobile */
+            }
+
+            header p {
+                font-size: 1.1em; /* Smaller header paragraph font size on mobile */
             }
         }
     </style>
