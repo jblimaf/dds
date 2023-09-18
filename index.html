@@ -4,47 +4,26 @@
     <meta charset="UTF-8">
     <title>João Lima Fernandes - Médecine Dentiste</title>
     <style>
-        /* Header styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
+        /* CSS styles here */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-
+        header {
+            background: url('your-background-image.jpg') center/cover no-repeat fixed;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
         header h1 {
             font-size: 2.5em;
             margin: 0;
         }
-
         header p {
             font-size: 1.2em;
         }
+        /* Add more styles as needed */
 
-        /* Header effects */
-        header::before {
-            content: "";
-            background: url('your-background-image.jpg') center/cover no-repeat fixed;
-            filter: grayscale(60%);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        header::after {
-            content: "";
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
     </style>
 </head>
 <body>
@@ -57,12 +36,29 @@
 
     <section id="resume">
         <h2>Resume</h2>
-        <!-- Add your resume content here -->
+        <p>Education:</p>
+        <ul>
+            <li>Diploma in Dentistry from Egas Moniz University (2020)</li>
+        </ul>
+        <p>Specializations:</p>
+        <ul>
+            <li>Clinical specialization in parodontology, surgery, and oral rehabilitation</li>
+        </ul>
+        <p>Experience:</p>
+        <ul>
+            <li>Member of the Dental Medicine team at Egas Moniz University</li>
+            <!-- Add more relevant experience here -->
+        </ul>
     </section>
 
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <!-- Add your portfolio content here -->
+        <p>Here are some of my notable works:</p>
+        <ul>
+            <li>Case Study 1: [Description of the case]</li>
+            <li>Case Study 2: [Description of the case]</li>
+            <!-- Add more portfolio items here -->
+        </ul>
     </section>
 
     <section id="contact">
@@ -72,7 +68,8 @@
     </section>
 
     <footer>
-        <!-- Add your footer content here -->
+        <p>&copy; 2023 João Lima Fernandes</p>
+        <!-- Add additional footer content, such as links to social media profiles or any other relevant information. -->
     </footer>
 </body>
 </html>
