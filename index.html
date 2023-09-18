@@ -1,119 +1,150 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CH">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Lima Fernandes - Dentiste</title>
+    <title>🇨🇭 João Lima Fernandes</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAi0lEQVR42mL8//8/AwAI/AGi6bEEAAAAASUVORK5CYII=" type="image/x-icon">
     <style>
         /* Reset some default styles */
-        body, h1, h2, p {
+        body, h1, h2, h3, p, ul {
             margin: 0;
             padding: 0;
         }
 
-        /* CSS styles here */
+        /* Modern styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            min-height: 100vh;
+            margin: 0; /* Remove default body margin */
+        }
+
+        .container {
+            width: 90%; /* Adjust the width as needed */
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
             background-color: #fff;
-            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         header {
-            text-align: center;
-            padding: 100px 0;
+            background-color: #fff; /* White header background */
+            color: #333;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
         }
 
         header h1 {
+            font-family: 'Pacifico', cursive; /* Signature-like font */
             font-size: 2.5em;
             margin: 0;
-            font-family: 'SignatureFont', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            background-color: #fff; /* White box behind text */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
         }
 
         header p {
             font-size: 1.2em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
         }
 
-        /* Add more styles as needed */
-
-        /* Navigation menu styles */
         nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
+            background-color: transparent;
             padding: 10px 0;
+            border-radius: 0 0 10px 10px;
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
+            list-style-type: none;
+            padding-left: 0;
         }
 
         nav li {
             display: inline;
-            margin: 0 20px;
+            margin-right: 20px;
         }
 
-        /* Slogan section styles */
+        nav a {
+            text-decoration: none;
+            color: #333; /* Dark links */
+            font-weight: bold;
+        }
+
         .slogan {
-            text-align: center;
-            background-color: #22345D;
+            background-color: #020c1b; /* Darker blue for slogan background */
             color: #fff;
-            padding: 20px;
+            padding: 20px 0;
+            border-radius: 0 0 10px 10px;
         }
 
-        .slogan p {
+        .langues {
+            background-color: #020c1b; /* Darker blue for langues background */
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .sub-slogan {
+            background-color: #020c1b; /* Darker blue for sub-slogan background */
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px 0;
+            background-color: #fff; /* White background for sections */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333; /* Dark section titles */
+        }
+
+        section p {
             font-size: 1.2em;
-        }
-
-        /* Content section styles */
-        .content {
-            padding: 40px;
+            margin-bottom: 8px;
         }
 
         /* Footer styles */
         footer {
-            text-align: center;
+            background-color: #fff; /* White footer background */
+            color: #333; /* Dark text color */
             padding: 20px 0;
-            background-color: #fff;
-            color: #333;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
         }
 
-        /* Language switcher styles */
-        .langues {
-            text-align: right;
-            padding: 10px;
-        }
-
-        .langues button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #333;
-        }
-
-        /* White boxes for content */
-        .white-box {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Adjust the width for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Language switcher -->
-    <div class="langues">
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('fr')">Français</button>
-        <button onclick="changeLanguage('pt')">Português</button>
-    </div>
-
-    <header>
-        <h1>João Lima Fernandes</h1>
-        <p>Dentiste</p>
-    </header>
-
-    <!-- Navigation menu -->
     <nav>
         <ul>
             <li><a href="#diplomes">Diplômes</a></li>
@@ -123,98 +154,61 @@
         </ul>
     </nav>
 
-    <!-- Slogan section -->
-    <section class="slogan">
-        <p>Parodontologie | Chirurgie orale | Dentisteries adhésive et esthétique | Prothèse fixe et amovible</p>
-    </section>
+    <div class="container" id="about">
+        <div class="langues">
+            <p>Français | Anglais | Portugais</p>
+        </div>
+        
+        <header>
+            <h1>João Lima Fernandes</h1>
+            <p>Médecin-dentiste diplômé en médecine dentaire en 2020 de l'Institut Universitaire Egas Moniz, avec une spécialisation clinique en parodontologie, chirurgie et réhabilitation orale, tout en ayant un intérêt marqué pour l'enseignement. Depuis la fin de ma formation jusqu'à aujourd'hui, je suis membre de l'équipe de Médecine Dentaire Conservatrice I, II, III et IV de l’Institut Universitaire Egas Moniz.</p>
+        </header>
 
-    <!-- Diplômes section -->
-    <section id="diplomes" class="content">
-        <div class="white-box">
+        <div class="slogan">
+            <p>Parodontologie | Chirurgie orale | Dentisteries Adhésive et Esthétique | Prothèse Fixe et Amovible</p>
+        </div>
+    </div>
+
+    <div class="container" id="diplomes">
+        <section>
             <h2>Diplômes</h2>
             <p>Diplôme d'études supérieures en Réhabilitation Orale et Biomimétique Avancée de la CESPU - 2024</p>
             <p>Diplôme d'études supérieures en Chirurgie Orale de l'Université des Sciences Médicales de Villa Clara, Santa Clara, Cuba - 2023</p>
             <p>Titre d'Expert en Chirurgie, Parodontologie et Réhabilitation Orale sur Implants de l'Université de Nebrija, Madrid - 2021-2022</p>
             <p>Diplôme d’études supérieures en Endodontie de FromRoots Endodontics School - 2020</p>
             <p>Cours Modulaire sur les Restaurations Directes en Résine Composée par le Dr. Paulo Monteiro - 2020</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Activité scientifique section -->
-    <section id="activite" class="content">
-        <div class="white-box">
+    <div class="container" id="activite">
+        <section>
             <h2>Activité scientifique</h2>
             <p>Collaborateur de Médecine Dentaire Conservatrice I, II, III et IV, depuis 2020 à aujourd'hui.</p>
             <p>Collaborateur de Réhabilitation Orale et de Chirurgie, de 2020 à 2022.</p>
             <p>Collaborateur de Triages/Urgences, en 2020.</p>
             <p>Membre de la Commission Éditoriale du Journal of Dentistry and Oral Sciences, 2021.</p>
             <p>Co-auteur de plusieurs posters scientifiques.</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Expérience section -->
-    <section id="experience" class="content">
-        <div class="white-box">
+    <div class="container" id="experience">
+        <section>
             <h2>Expérience</h2>
             <p>Laranjeira Dental Clinic (Cascais) - 2023</p>
             <p>Clinica Patrão (Lisbonne) - 2023</p>
             <p>MasterDental (Lisbonne, Oeiras et Torres Vedras) - 2020-2022</p>
             <p>Dentalface (Lisbonne) - 2020-2022</p>
             <p>Smileup (Lisbonne, Barreiro, Vila Franca de Xira et Odivelas) - 2020-2022</p>
-        </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="content">
-        <div class="white-box">
-            <h2>Contact</h2>
-            <p>Email: limafernandesmd@gmail.com</p>
-            <p>Contact: +351960310918</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 João Lima Fernandes</p>
-        <p>Contact - Email | Français | Anglais | Portugais</p>
+        <div class="container" id="contact">
+            <p>&copy; 2023 João Lima Fernandes</p>
+            <p>Contact : +351960310918</p>
+            <p>Email : limafernandesmd@gmail.com</p>
+        </div>
     </footer>
-
-    <!-- i18next script for language translation -->
-    <script src="https://cdn.jsdelivr.net/npm/i18next@22.4.4/dist/umd/i18next.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.5.3/dist/umd/i18nextXHRBackend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.1/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
-    <script>
-        function changeLanguage(lang) {
-            i18next.changeLanguage(lang);
-        }
-
-        i18next.init({
-            lng: 'fr',
-            resources: {
-                en: {
-                    translation: {
-                        /* English translations here */
-                    }
-                },
-                fr: {
-                    translation: {
-                        /* French translations here */
-                    }
-                },
-                pt: {
-                    translation: {
-                        /* Portuguese translations here */
-                    }
-                }
-            }
-        }, function(err, t) {
-            document.documentElement.lang = i18next.language;
-            document.getElementById('diplomes').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        i18next.on('languageChanged', function(lang) {
-            document.documentElement.lang = lang;
-        });
-    </script>
 </body>
 </html>
