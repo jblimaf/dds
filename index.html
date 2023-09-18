@@ -14,8 +14,8 @@
         /* Modern styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #0e2a47; /* Dark blue background */
-            color: #fff; /* White text */
+            background-color: #fff; /* White background */
+            color: #333; /* Dark text color */
             display: flex;
             flex-direction: column;
             justify-content: center; /* Center content vertically */
@@ -29,7 +29,7 @@
             max-width: 800px;
             padding: 20px;
             text-align: center;
-            background-color: #152a4e; /* Slightly lighter blue background */
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -70,7 +70,7 @@
 
         nav a {
             text-decoration: none;
-            color: #fff; /* White links */
+            color: #333; /* Dark links */
             font-weight: bold;
         }
 
@@ -91,12 +91,15 @@
         section {
             margin-bottom: 20px;
             padding: 20px 0;
+            background-color: #fff; /* White background for sections */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
-            color: #fff; /* White section titles */
+            color: #333; /* Dark section titles */
         }
 
         section p {
@@ -107,7 +110,7 @@
         /* Footer styles */
         footer {
             background-color: transparent; /* Footer background color */
-            color: #fff; /* White text */
+            color: #333; /* Dark text color */
             padding: 20px 0;
             text-align: center;
             border-radius: 0 0 10px 10px;
@@ -124,6 +127,7 @@
 <body>
     <nav>
         <ul>
+            <li><a href="#about">À propos</a></li>
             <li><a href="#diplomes">Diplômes</a></li>
             <li><a href="#activite">Activité scientifique</a></li>
             <li><a href="#experience">Expérience</a></li>
