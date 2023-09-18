@@ -92,6 +92,7 @@
             color: #fff;
             padding: 10px 0;
             border-radius: 0 0 10px 10px;
+            cursor: pointer; /* Add cursor pointer for interaction */
         }
 
         .sub-slogan {
@@ -156,7 +157,7 @@
 
     <div class="container" id="about">
         <div class="langues">
-            <p>Français | Anglais | Portugais</p>
+            <a href="#" id="lang-fr">Français</a> | <a href="#" id="lang-en">Anglais</a> | <a href="#" id="lang-pt">Portugais</a>
         </div>
         
         <header>
@@ -210,5 +211,35 @@
             <p>Email : limafernandesmd@gmail.com</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for language switching
+        document.getElementById('lang-fr').addEventListener('click', function() {
+            // Use an external translation service to translate the page to Swiss French
+            // Replace the document content with the translated content
+            // You would need to implement this part using a translation API or service
+            // For example, you can use Google Translate API to achieve this functionality.
+            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
+            alert('This feature requires a translation service and API integration.');
+        });
+
+        document.getElementById('lang-en').addEventListener('click', function() {
+            // Use an external translation service to translate the page to English
+            // Replace the document content with the translated content
+            // You would need to implement this part using a translation API or service
+            // For example, you can use Google Translate API to achieve this functionality.
+            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
+            alert('This feature requires a translation service and API integration.');
+        });
+
+        document.getElementById('lang-pt').addEventListener('click', function() {
+            // Use an external translation service to translate the page to Portuguese (Portugal)
+            // Replace the document content with the translated content
+            // You would need to implement this part using a translation API or service
+            // For example, you can use Google Translate API to achieve this functionality.
+            // Due to the complexity of translation, it's beyond the scope of simple HTML/CSS/JS.
+            alert('This feature requires a translation service and API integration.');
+        });
+    </script>
 </body>
 </html>
